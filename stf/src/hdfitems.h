@@ -162,9 +162,10 @@ struct HDF_Part_Info {
         names[itemp++]=H5std_string("Density");
         names[itemp++]=H5std_string("InternalEnergy");
         names[itemp++]=H5std_string("StarFormationRate");
-        //always place the metacallity at position 7 in naming array
+        names[itemp++]=H5std_string("Metallicity");
+	//always place the metacallity at position 7 in naming array
         if (hdfnametype==HDFILLUSTISNAMES) {
-            names[itemp++]=H5std_string("GFM_Metallicity");
+            //names[itemp++]=H5std_string("GFM_Metallicity");
             names[itemp++]=H5std_string("ElectronAbundance");
             names[itemp++]=H5std_string("NeutralHydrogenAbundance");
             names[itemp++]=H5std_string("Volume");
@@ -184,7 +185,8 @@ struct HDF_Part_Info {
         names[itemp++]=H5std_string("Coordinates");
         names[itemp++]=H5std_string("Velocities");
         names[itemp++]=H5std_string("ParticleIDs");
-        if (hdfnametype==HDFILLUSTISNAMES) {
+        names[itemp++]=H5std_string("Masses");
+	if (hdfnametype==HDFILLUSTISNAMES) {
             names[itemp++]=H5std_string("Potential");
             names[itemp++]=H5std_string("SubfindDensity");
             names[itemp++]=H5std_string("SubfindHsml");
@@ -203,10 +205,12 @@ struct HDF_Part_Info {
         names[itemp++]=H5std_string("Velocities");
         names[itemp++]=H5std_string("ParticleIDs");
         names[itemp++]=H5std_string("Masses");
+	names[itemp++]=H5std_string("Metallicity");
+	names[itemp++]=H5std_string("StellarFormationTime");
         //for stars assume star formation and metallicy are position 4, 5 in name array
         if (hdfnametype==HDFILLUSTISNAMES) {
-            names[itemp++]=H5std_string("GFM_StellarFormationTime");
-            names[itemp++]=H5std_string("GFM_Metallicity");
+            //names[itemp++]=H5std_string("GFM_StellarFormationTime");
+            //names[itemp++]=H5std_string("GFM_Metallicity");
             names[itemp++]=H5std_string("Potential");
             names[itemp++]=H5std_string("SubfindDensity");
             names[itemp++]=H5std_string("SubfindHsml");
