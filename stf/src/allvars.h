@@ -579,7 +579,7 @@ struct Options
         icomoveunit=0;
         icosmologicalin=1;
 
-        iusesinkparticles=1;
+        iusesinkparticles=0;
         iusewindparticles=0;
 
         snapshotvalue=0;
